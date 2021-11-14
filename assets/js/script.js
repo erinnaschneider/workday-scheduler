@@ -1,8 +1,10 @@
 var currentDay = document.getElementById("currentDay");
-var saveButton = $(".save-btn");
+var saveButton = document.getElementById("saveBtn");
+var clearButton = document.getElementById("clearBtn");
+
 
 // click save button
-saveButton.on("click", function() {
+saveButton.addEventListener("click", function() {
     //get the data-id from btn
     var id = $(this).attr("data-id");
     //find the corresponding text with that id
@@ -10,6 +12,8 @@ saveButton.on("click", function() {
     //save that to local storage
     localStorage.setItem(id, text);
 });
+
+
 
 function loadText() {
     // get the current hour
