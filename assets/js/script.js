@@ -41,7 +41,7 @@ function loadText() {
 
 function today() {
     // current date 
-    var thisDate = moment().format("MMMM Do YYYY, h:mm:ss");
+    var thisDate = moment().format("dddd, MMMM Do YYYY, h:mm:ss");
     //set the header to say the day
     $("#currentDay").html(thisDate);
     
