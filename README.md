@@ -6,3 +6,9 @@
 * On the righthand side, there are two functional buttons. 
   * 'Save' adds the user's text inputs to local storage, so that data remains on page refresh.
   * 'Clear' removes all text from view/the local storage.
+
+## Screenshot of deployed application
+![127 0 0 1_5500_index html](https://user-images.githubusercontent.com/90404513/141700588-0739d077-2465-425a-9f3c-f1cab41bf4cc.png)
+
+
+### Made by Erinn 😁
