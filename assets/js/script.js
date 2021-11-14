@@ -17,23 +17,23 @@ saveButton.addEventListener("click", function() {
 
 function loadText() {
     // get the current hour
-    var thisHour = moment().hour();
+    var currentHour = moment().hour();
 
     for (let i = 8; i < 21; i++) {
         // get the text from local storage
         var text = localStorage.getItem(i);
         
         $("#" + i).val(text);
-        // thisHour < i = future
-        if (thisHour < i) {
+        // currentHour < i = future
+        if (currentHour < i) {
             $("#" + i).addClass("future");
         }
-        // thisHour = i = now
-        else if (thisHour === i) {
+        // currentHour = i = now
+        else if (currentHour === i) {
             $("#" + i).addClass("present");
         }
-        // thisHouse > i = past
-        else if (thisHour > i) {
+        // currentHouse > i = past
+        else if (currentHour > i) {
             $("#" + i).addClass("past");
         }
     }
