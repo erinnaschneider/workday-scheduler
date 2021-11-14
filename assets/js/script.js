@@ -1,3 +1,4 @@
+var currentDay = document.getElementById("currentDay");
 var saveButton = $(".save-btn");
 
 // click save button
@@ -34,13 +35,15 @@ function loadText() {
     }
 };
 
-function currentTime() {
-    //get the full day, full month and data
-    var currentDay = moment().format("dddd, MMMM Do");
+function today() {
+    // current date 
+    var thisDate = moment().format("MMMM Do YYYY, h:mm:ss");
     //set the header to say the day
-    $("#currentDay").html(currentDay);
+    $("#currentDay").html(thisDate);
+    
 };
 
-currentTime();
+today();
 loadText();
 setInterval(loadText,((1000*60)*15));
+setInterval(today, 1000)
