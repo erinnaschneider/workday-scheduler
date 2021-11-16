@@ -13,18 +13,6 @@ saveButton.on("click", function() {
     localStorage.setItem(id, text);
 });
 
-// click clear button
-clearButton.on("click", function(event) {
-    // identify each click event
-   var clearTimeSlot = event.target.getAttribute("data-id");
-   var userInput = localStorage.get() 
-   
-   console.log(event.target.getAttribute("data-id"));
-
-
-    //localStorage.clear();
-    //innerHTML = "";
-});
 
 function loadText() {
     // get the current hour
