@@ -1,10 +1,10 @@
 var currentDay = document.getElementById("currentDay");
-var saveButton = document.getElementById("saveBtn");
-var clearButton = document.getElementById("clearBtn");
+var saveButton = $(".save-btn");
+var clearButton = $("#clearBtn");
 
 
 // click save button
-saveButton.addEventListener("click", function() {
+saveButton.on("click", function() {
     //get the data-id from btn
     var id = $(this).attr("data-id");
     //find the corresponding text with that id
@@ -13,7 +13,18 @@ saveButton.addEventListener("click", function() {
     localStorage.setItem(id, text);
 });
 
+// click clear button
+clearButton.on("click", function(event) {
+    // identify each click event
+   var clearTimeSlot = event.target.getAttribute("data-id");
+   var userInput = localStorage.get() 
+   
+   console.log(event.target.getAttribute("data-id"));
 
+
+    //localStorage.clear();
+    //innerHTML = "";
+});
 
 function loadText() {
     // get the current hour
